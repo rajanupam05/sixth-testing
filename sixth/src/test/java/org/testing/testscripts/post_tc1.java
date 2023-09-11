@@ -41,14 +41,14 @@ public class post_tc1
 		Integer input=r.nextInt();
 		String response=replacevalue.replace(responsedata, "id", input.toString());
 		System.out.print("enter the name: ");
-		Scanner s=new Scanner(System.in);
-		String name=s.next();
-		String finalvalue=replacevalue.replace(response, "name", name);
+		//Scanner s=new Scanner(System.in);
+		//String name=s.next();
+		//String finalvalue=replacevalue.replace(response, "name", name);
 		
 		///steps calling
 		
 		httpmethod http=new httpmethod(pr);
-		Response res=http.post("uri1", finalvalue);
+		Response res=http.post("uri1", response);
 		returnvalue=jsonparsingusingorgjson.jsonparseget(res.asString(), "id");
 		
 		///responsevalidation
