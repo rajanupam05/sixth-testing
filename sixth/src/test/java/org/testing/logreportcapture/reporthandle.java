@@ -4,9 +4,9 @@ import com.relevantcodes.extentreports.ExtentReports;
 
 public class reporthandle 
 {
-	public static ExtentReports reporthandling(String filePath)
+	public static ExtentReports reporthandling(String Path)
 	{
-		ExtentReports report=new ExtentReports(filePath, false);
+		ExtentReports report=new ExtentReports(Path, false);
 		return report;
 		
 	}

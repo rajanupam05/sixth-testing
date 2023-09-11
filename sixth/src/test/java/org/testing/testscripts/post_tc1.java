@@ -49,14 +49,14 @@ public class post_tc1
 		
 		httpmethod http=new httpmethod(pr);
 		Response res=http.post("uri1", response);
-		returnvalue=jsonparsingusingorgjson.jsonparseget(res.asString(), "id");
+		
 		
 		///responsevalidation
 		
 		statussoft.reportassertion(201, res, test1);
 		statussoft.logassertion(201, res, test1, "tc1");
 		statussoft.validate(res, 201);
-		
+		returnvalue=jsonparsingusingorgjson.jsonparseget(res.asString(), "id");
 		///report save and close
 		
 		report.endTest(test1);

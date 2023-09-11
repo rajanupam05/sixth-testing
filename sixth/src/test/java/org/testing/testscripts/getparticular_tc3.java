@@ -19,6 +19,6 @@ public class getparticular_tc3
 		Properties pr=propertieshandle.loadproperties("../sixth/uri.properties");
 		httpmethod http=new httpmethod(pr);
 		Response res=http.getparticular("uri1", post_tc1.returnvalue);
-		datasoft.validate(res, "name", "kapil");
+		datasoft.validate(res, "name", "raftaar");
 	}
 }
